@@ -6,6 +6,6 @@ export default class CustomErrors {
     };
 
     getErrorMessage(code) {
-        return this.messages[code] ? this.messages[code] : 'Error not found';
+        return this.messages[code] ? this.messages[code] : 'Fatal Error';
     }
 }

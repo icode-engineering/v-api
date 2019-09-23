@@ -1,22 +1,24 @@
-import * as request from 'request-promise';
+import axios from 'axios';
 
 class Http {
 
+    private axiosInstance;
     /**
      * Http Service Constructor
      */
-    constructor() {
+    constructor(baseUrl: string) {
+        this.axiosInstance = axios.create({
+            baseURL: baseUrl
+        });
     }
 
     /**
      * POST | Sends Http POST request
      * @param uri
      * @param body
-     * @param options
      */
-    post(uri: string, body = {}, options: any = {}) {
-        options = {...options, body, json: true, uri, method: 'POST'};
-        return request(options);
+    post(uri: string, body = {}, options?: any) {
+        return this.axiosInstance.post(uri, body, options);
     };
 
     /**
@@ -24,10 +26,9 @@ class Http {
      * @param uri
      * @param options
      */
-    get(uri: string, options: any = {}) {
-        options = {...options, uri, method: 'GET'};
-        return request(options);
+    get(uri: string, options?: any) {
+        return this.axiosInstance.get(uri, options);
     }
 }
 
-export default new Http();
+export default Http;

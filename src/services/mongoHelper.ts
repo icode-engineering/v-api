@@ -1,14 +1,14 @@
-import * as logger from '../config/winston';
-import * as mongo from '../config/mongo';
+import mongo from '../config/mongo';
 
 const config = require('../config/settings');
 
 class MongoDBHelper {
     private mongoDBClient: any;
+    protected mongoDBModel: any;
+
     /**
      * The constructor
      *
-     * @param mongoDBClient - MongoDB client
      * @param mongoDBModel - the model you wish to operate on
      */
     constructor(mongoDBModel) {
@@ -30,7 +30,7 @@ class MongoDBHelper {
                 query.select(params.fields);
             }
             if (params.populate) {
-                for (i = 0; i < params.populate.length; i++) {
+                for (let i = 0; i < params.populate.length; i++) {
                     query.populate(params.populate[i]);
                 }
             }
@@ -62,7 +62,7 @@ class MongoDBHelper {
                 query.select(params.fields);
             }
             if (params.populate) {
-                for (i = 0; i < params.populate.length; i++) {
+                for (let i = 0; i < params.populate.length; i++) {
                     query.populate(params.populate[i]);
                 }
             }
@@ -97,7 +97,7 @@ class MongoDBHelper {
 
 
             if (params.populate) {
-                for (i = 0; i < params.populate.length; i++) {
+                for (let i = 0; i < params.populate.length; i++) {
                     query.populate(params.populate[i]);
                 }
             }

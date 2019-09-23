@@ -6,7 +6,7 @@ import logger from '../src/config/winston';
 import {routes} from './routes';
 
 export class VenimaApi {
-    private _app: express.Application;
+    readonly _app: express.Application;
 
     constructor() {
 

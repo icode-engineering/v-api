@@ -22,6 +22,10 @@ class ValidatorService {
         return new Validator(data, {});
     }
 
+    fails(): boolean {
+        return Validator.fails();
+    }
+
 }
 
-export default new ValidatorService();
+export default ValidatorService;
