@@ -5,7 +5,7 @@ const timestamp: number = Date.now();
 const options = {
     file: {
         level: 'info',
-        filename: `${rootPath}/logs/venima-${timestamp}.log`,
+        filename: `${rootPath}/logs/vinema-${timestamp}.log`,
         handleExceptions: true,
         json: true,
         timestamp: true,

@@ -11,12 +11,12 @@ CMD ./run.sh
 FROM node:8.11
 
 # Copy files
-COPY . /venima
-COPY package.json /venima/package.json
+COPY . /vinema
+COPY package.json /vinema/package.json
 #COPY .env /plasslink/.env
 
 # Specify work directory
-WORKDIR /venima
+WORKDIR /vinema
 
 # This is actually only needed for Local development
 RUN chmod +x ./bin/get_app_status.sh ./bin/start.sh

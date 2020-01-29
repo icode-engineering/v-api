@@ -9,14 +9,14 @@ function getContainerStatus(){
     if [[ -z ${CONTAINER_ID} || $1 == "-f" ]] ; then
         echo "No container: Starting . . ."
 
-        docker stop venima_api
-        docker rm venima_api
+        docker stop vinema_api
+        docker rm vinema_api
 
         cd ${DOC_ROOT}
 
         source ${DIR}/start.sh -d
 
-        docker exec -d venima_api bash -c "npm i -g forever && npm start"
+        docker exec -d vinema_api bash -c "npm i -g forever && npm start"
 
         echo "Container started in background!"
     else

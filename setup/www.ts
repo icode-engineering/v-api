@@ -3,7 +3,7 @@ import * as http from 'http';
 import * as fs from 'fs';
 import * as rootPath from 'app-root-path';
 import './env';
-import {VenimaApi} from '../src/server';
+import {VinemaApi} from '../src/server';
 import {NODE_ENV, PORT} from '../src/lib/constant';
 import logger from '../src/config/winston';
 
@@ -72,7 +72,7 @@ const port = normalizePort(PORT || '3030');
 
 
 /** Initialize api service */
-const api = new VenimaApi();
+const api = new VinemaApi();
 const app = api.app;
 
 app.set('port', port);

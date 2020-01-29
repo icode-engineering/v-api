@@ -1,4 +1,4 @@
-IMAGE_NAME=venima-api
+IMAGE_NAME=vinema-api
 WEB_PORT=3000
 
 function showAppStatus(){

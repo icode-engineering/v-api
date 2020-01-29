@@ -5,7 +5,7 @@ import * as morgan from 'morgan';
 import logger from '../src/config/winston';
 import {routes} from './routes';
 
-export class VenimaApi {
+export class VinemaApi {
     readonly _app: express.Application;
 
     constructor() {
@@ -37,7 +37,7 @@ export class VenimaApi {
     }
 
     init() {
-        return new VenimaApi();
+        return new VinemaApi();
     }
 
     routes(app?: express.Application) {

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-IMAGE_NAME=venima_api
+IMAGE_NAME=vinema_api
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DOC_ROOT="$( dirname "${DIR}")"
 WEB_PORT=3000
@@ -69,7 +69,7 @@ function runContainerInBackground() {
         -d \
         --name ${IMAGE_NAME} \
         -p ${WEB_PORT}:${WEB_PORT} \
-        -v ${DOC_ROOT}:/venima_api \
+        -v ${DOC_ROOT}:/vinema_api \
         -e NODE_ENV=production \
         ${IMAGE_NAME} \
         sh -c "npm i -g forever && npm i && npm run docs && npm run prod:server"
@@ -103,7 +103,7 @@ if [[ $1 == "-b" ]] ; then
     buildImage
     # docker-compose build web
     echo ">>>>>> Start containers (docker compose up)"
-    docker-compose -p venima_api up -d
+    docker-compose -p vinema_api up -d
     echo "Containers Started (docker compose up) <<<<<<"
 
 elif [[ $1 == "-d" ]] ; then
@@ -173,7 +173,7 @@ elif [[ $1 == "-i" ]] ; then
         -i -t \
         --name ${IMAGE_NAME} \
         -p ${WEB_PORT}:${WEB_PORT} \
-        -v ${DOC_ROOT}:/venima_api \
+        -v ${DOC_ROOT}:/vinema_api \
         -e NODE_ENV=production \
         ${IMAGE_NAME} \
         sh -c "npm i && npm run build && npm run docs && bash"

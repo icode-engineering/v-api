@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "venima_api",
+      "name": "vinema_api",
       "script": "./bin/www.js",
       "watch": ["bin"],
       "env": {

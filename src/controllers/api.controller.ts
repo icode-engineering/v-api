@@ -9,7 +9,7 @@ export class ApiController {
      */
     status(req, res) {
         const response = {
-            service: 'Venima API',
+            service: 'Vinema API',
             state: 'Up'
         };
         success(res, response);

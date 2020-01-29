@@ -1,7 +1,7 @@
 {
-  "name": "venima-api",
+  "name": "vinema-api",
   "version": "1.0.0",
-  "description": "API for making requests for Venima Project",
+  "description": "API for making requests for Vinema Project",
   "main": "index.js",
   "scripts": {
     "api": "nodemon",
