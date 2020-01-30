@@ -18,17 +18,14 @@ COPY package.json /vinema/package.json
 # Specify work directory
 WORKDIR /vinema
 
-# This is actually only needed for Local development
-RUN chmod +x ./bin/get_app_status.sh ./bin/start.sh
-
 RUN npm install
 RUN npm install pm2 -g
 RUN npm install -g nodemon@latest knex@0.15.2 gulp-cli forever mocha apidoc
-RUN npm run build
+RUN npm run dev
 
-VOLUME ["/invent_server"]
+VOLUME ["/venima_api"]
 
-EXPOSE 3000
+EXPOSE 3030
 
 CMD ["nodemon"]
 
