@@ -42,7 +42,7 @@
     "validatorjs": "^3.17.1",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
-    "winston": "2.4.0"
+    "winston": "3.2.1"
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.1",
