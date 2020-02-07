@@ -35,7 +35,7 @@
     "mongoose": "5.8.11",
     "morgan": "^1.9.1",
     "redis": "2.8.0",
-    "restify": "6.3.4",
+    "restify": "8.5.1",
     "restify-plugins": "1.6.0",
     "ts-node": "*",
     "typescript": "^3.6.2",
