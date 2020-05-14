@@ -23,7 +23,7 @@
     "@types/jsonwebtoken": "^8.3.3",
     "@types/mongoose": "^5.5.16",
     "@types/validatorjs": "^3.15.0",
-    "amqplib": "0.5.5",
+    "amqplib": "0.5.6",
     "app-root-path": "^3.0.0",
     "axios": "^0.19.0",
     "bluebird": "3.7.2",
