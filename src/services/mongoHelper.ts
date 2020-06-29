@@ -1,4 +1,4 @@
-import mongo from '../config/mongo'
+import { mongo } from '../config/mongo'
 
 import { config } from '../config/settings'
 

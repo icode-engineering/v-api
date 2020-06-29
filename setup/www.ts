@@ -27,9 +27,9 @@ try {
 }
 
 /** Normalize a port into a number, string, or false. */
-const normalizePort = val => {
+const normalizePort = (val: string): number => {
   const connPort = parseInt(val, 10)
-  return connPort >= 0 ? connPort : isNaN(connPort) ? val : false
+  return connPort >= 0 ? connPort : (isNaN(connPort) ? 9999 : 0)
 }
 
 /** Event listener for HTTP server "error" event. */
@@ -56,15 +56,16 @@ const onError = error => {
   }
 }
 
+
+const nodeEnv: string | undefined = NODE_ENV
+const port: number = normalizePort(PORT || '3030')
+
 /** Event listener for HTTP server "listening" event. */
 const onListening = () => {
   const addr = server.address()
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`
   logger.info(`Listening on ${bind} in ${nodeEnv} environment`)
 }
-
-const nodeEnv = NODE_ENV
-const port = normalizePort(PORT || '3030')
 
 /** Initialize api service */
 const api = new VinemaApi()

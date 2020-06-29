@@ -1,7 +1,7 @@
 import * as bluebird from 'bluebird'
 import * as mongoose from 'mongoose'
 import { config } from './settings'
-import * as logger from './winston'
+import { logger } from './winston'
 
 const connectionString =
   !config.mongodb.username || !config.mongodb.password
@@ -10,7 +10,7 @@ const connectionString =
 
 mongoose.Promise = bluebird
 
-export default mongo = mongoose
+const mongo = mongoose
   .connect(connectionString, { useNewUrlParser: true })
   .then(db => {
     logger.info('Mongo Connection Established')
@@ -25,3 +25,5 @@ export default mongo = mongoose
     logger.error(`Mongo Connection Error : ${err}`)
     process.exit(1)
   })
+
+  export { mongo }

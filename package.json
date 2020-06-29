@@ -4,16 +4,19 @@
   "description": "API Server for Vinema Project",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
-    "lint:fix": "tslint --fix --project ./tsconfig.json --exclude '**/*.d.ts'"
+    "dev": "unite \"nodemon\" \"tsc-watch --noEmit -p .\"",
+    "lint:fix": "tslint --fix --project ./tsconfig.json --exclude '**/*.d.ts'",
+    "check-types": "tsc -p tsconfig.json --noEmit --noErrorTruncation",
+    "check-types:watch": "tsc -p tsconfig.json --noEmit --noErrorTruncation --watch"
   },
   "author": "Israel Arunah <arunahisraelg2010@gmail.com>",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/vinema-engineering/v-api"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/bluebird": "^3.5.27",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^4.17.1",
@@ -31,6 +34,7 @@
     "morgan": "^1.9.1",
     "redis": "2.8.0",
     "ts-node": "*",
+    "tsc-watch": "^4.1.0",
     "typescript": "^3.7.3",
     "validatorjs": "^3.17.1",
     "webpack": "^4.39.3",
@@ -38,9 +42,10 @@
     "winston": "2.4.0"
   },
   "devDependencies": {
+    "@gunar/unite": "^1.2.3",
     "@types/cookie-parser": "1.4.1",
     "@types/morgan": "1.7.35",
-    "@types/node": "10.0.0",
+    "@types/node": "^13.7.0",
     "concurrently": "3.5.1",
     "nodemon": "^1.19.4",
     "prettier": "^1.19.1",
@@ -48,8 +53,5 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.1.0",
     "tslint-plugin-prettier": "^2.1.0"
-  },
-  "engines": {
-    "node": "10.x"
   }
 }

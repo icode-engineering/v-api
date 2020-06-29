@@ -2,6 +2,7 @@ import * as rootPath from 'app-root-path'
 import * as winston from 'winston'
 
 const timestamp: number = Date.now()
+
 const options = {
   console: {
     colorize: true,

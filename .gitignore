@@ -59,10 +59,11 @@ typings/
 # SWP files
 .*.swp
 
-
 .idea/
 /data
 /bin
 /public
 package-lock.json
 .env
+app.env
+logs/
