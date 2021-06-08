@@ -41,7 +41,7 @@
     "typescript": "^3.6.2",
     "validatorjs": "^3.17.1",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
+    "webpack-cli": "^4.7.2",
     "winston": "3.2.1"
   },
   "devDependencies": {
